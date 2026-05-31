@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Killer Clown — John Wayne Gacy (Dark Project)</title>
+    <style>
+        /* RESET */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* BODY */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #080808, #0f0f10);
+            color: #e9e6e6;
+            line-height: 1.6;
+            padding: 20px 12px;
+        }
+        /* MAIN WRAPPER */
+        
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #141416;
+            border-top: 4px solid #7a1212;
+            border-bottom: 4px solid #7a1212;
+            border-radius: 10px;
+        }
+        /* HEADER */
+        
+        header h1 {
+            font-size: 1.6rem;
+            color: #ff5a5a;
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        /* NAV */
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 8px 14px;
+            background: #18181a;
+            border-radius: 6px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .2s;
+        }
+        
+        nav a:hover {
+            background: #2a0f0f;
+            transform: translateY(-3px);
+        }
+        /* INTRO */
+        
+        .intro {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 18px;
+        }
+        /* GRID LAYOUT */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 22px;
+            align-items: start;
+        }
+        /* CARD */
+        
+        .card {
+            background: #121212;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        /* LIST */
+        
+        .card ul {
+            margin-left: 18px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        /* SIDEBAR */
+        
+        aside {
+            position: sticky;
+            top: 20px;
+        }
+        /* META BOX */
+        
+        .meta {
+            background: #151515;
+            padding: 14px;
+            border-radius: 8px;
+            border-top: 3px solid #6b1616;
+            border-bottom: 3px solid #6b1616;
+        }
+        /* GALLERY */
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .gallery img {
+            width: calc(33.333% - 10px);
+            min-width: 120px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        /* VIDEO */
+        
+        .video-wrap {
+            margin-top: 12px;
+        }
+        
+        .video-wrap video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        /* TABLE FIX (IMPORTANT RESPONSIVE) */
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            display: block;
+            overflow-x: auto;
+        }
+        
+        table th,
+        table td {
+            padding: 10px;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #1a1a1a;
+        }
+        
+        tbody tr:hover {
+            background: #2a0f0f;
+            color: #fff;
+        }
+        /* EXPERT BOX */
+        
+        .experts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .expert {
+            background: #121212;
+            padding: 12px;
+            border-radius: 7px;
+            border-top: 2px solid #6b1414;
+            border-bottom: 2px solid #6b1414;
+        }
+        /* FOOTER */
+        
+        footer {
+            text-align: center;
+            padding: 14px;
+            margin-top: 18px;
+            color: #cfcfcf;
+        }
+        /* LINKS */
+        
+        a {
+            color: #ff6b6b;
+        }
+        /* FOCUS ACCESSIBILITY */
+        
+        a:focus {
+            outline: 3px solid rgba(255, 90, 90, 0.3);
+            outline-offset: 3px;
+        }
+        /* ================= RESPONSIVE ================= */
+        /* tablet */
+        
+        @media (max-width:1024px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            aside {
+                position: relative;
+                top: auto;
+            }
+        }
+        /* mobile */
+        
+        @media (max-width:768px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                width: 48%;
+                height: 130px;
+            }
+            table {
+                font-size: 0.85rem;
+            }
+            .card {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>John Wayne Gacy — Killer Clown (Dark Portfolio)</h1>
+        </header>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#crimes">Introduction</a>
+            <a href="#compare">Comparison</a>
+            <a href="#experts">Experts</a>
+            <a href="#media">Media</a>
+        </nav>
+
+        <section id="intro" class="intro">
+            <p>John Wayne Gacy performed publicly as "Pogo the Clown" while secretly committing gruesome murders. Below is a clean, dark presentation — images and a short video slot are included. Replace the sample asset paths in <code>assets/</code> with
+                your own files.</p>
+        </section>
+
+        <div class="grid">
+            <main>
+                <article class="card" id="crimes">
+                    <h2>Crimes & Arrest</h2>
+                    <ul>
+                        <li>Lured young men with false promises and opportunities.</li>
+                        <li>Most victims were strangled and hidden in his home's crawl space.</li>
+                        <li>Arrested in 1978; convicted of 33 murders; executed in 1994.</li>
+                    </ul>
+                </article>
+
+                <article class="card" id="compare">
+                    <h2>Dangerous Killers — Comparison Table</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Alias</th>
+                                <th>Residence</th>
+                                <th>Age</th>
+                                <th>Victims</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Wayne Gacy</td>
+                                <td>Killer Clown</td>
+                                <td>Chicago, USA</td>
+                                <td>52</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>Ted Bundy</td>
+                                <td>—</td>
+                                <td>USA</td>
+                                <td>42</td>
+                                <td>30+</td>
+                            </tr>
+                            <tr>
+                                <td>Jeffrey Dahmer</td>
+                                <td>Milwaukee Cannibal</td>
+                                <td>Milwaukee, USA</td>
+                                <td>34</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>Richard Ramirez</td>
+                                <td>The Night Stalker</td>
+                                <td>California, USA</td>
+                                <td>30</td>
+                                <td>14+</td>
+                            </tr>
+                            <tr>
+                                <td>David Berkowitz</td>
+                                <td>Son of Sam</td>
+                                <td>New York, USA</td>
+                                <td>24</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Andrei Chikatilo</td>
+                                <td>Butcher of Rostov</td>
+                                <td>Russia</td>
+                                <td>53</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>Ed Gein</td>
+                                <td>Butcher of Plainfield</td>
+                                <td>Wisconsin, USA</td>
+                                <td>77</td>
+                                <td>2+</td>
+                            </tr>
+                            <tr>
+                                <td>Pedro Alonso Lopez</td>
+                                <td>Monster of the Andes</td>
+                                <td>Colombia</td>
+                                <td>48</td>
+                                <td>110+</td>
+                            </tr>
+                            <tr>
+                                <td>Albert Fish</td>
+                                <td>The Gray Man</td>
+                                <td>New York, USA</td>
+                                <td>65</td>
+                                <td>3+</td>
+                            </tr>
+                            <tr>
+                                <td>Jack Unterweger</td>
+                                <td>Journalist Killer</td>
+                                <td>Austria</td>
+                                <td>43</td>
+                                <td>11+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="card" id="media">
+                    <h2>Media (Images & Video)</h2>
+                    <!-- GALLERY: replace paths with your local images in an assets/ folder -->
+                    <div class="gallery" aria-label="image gallery">
+                        <img src="photoes/1.png" alt="Gacy portrait stylized" />
+                        <img src="photoes/2.png" alt="Gacy candid stylized" />
+                        <img src="photoes/image.png" alt="archive stylized" />
+                    </div>
+
+                    <!-- VIDEO: replace video.mp4 with your file in assets/ -->
+                    <div class="video-wrap">
+                        <video controls poster="photoes/4.png">
+          <source src="assets/gacy-short.mp4" type="video/mp4">
+          <!-- Fallback text -->
+          Your browser does not support the video tag. Replace the source path with assets/gacy-short.mp4
+        </video>
+                        <p class="small" style="margin-top:8px;text-align:center">Tip: Put your media files in <code>assets/</code> (same folder as this HTML) and keep filenames exact.</p>
+                    </div>
+                </article>
+
+            </main>
+
+            <aside>
+                <div class="meta">
+                    <h3>Quick Facts</h3>
+                    <p>Born: 1942 — Chicago, IL · Arrested: 1978 · Convicted: 33 murders · Executed: 1994</p>
+                </div>
+
+                <div class="card" style="margin-top:14px">
+                    <h2 id="experts">Expert Opinions</h2>
+                    <div class="experts">
+                        <div class="expert"><strong>Psychologist:</strong> Gacy displayed antisocial traits and extreme manipulativeness.</div>
+                        <div class="expert"><strong>Criminologist:</strong> The charm-driven lures emphasize how predators exploit trust.</div>
+                        <div class="expert"><strong>Law Enforcement:</strong> His public persona masked a brutal private reality, complicating detection.</div>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+
+        <footer>
+            &copy; 2025 — Killer Clown Project • Replace <code>assets/</code> media files with your own images and video.
+        </footer>
+
+    </div>
+</body>
+
+</html>

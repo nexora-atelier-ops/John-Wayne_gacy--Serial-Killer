@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Killer Clown — John Wayne Gacy (Dark Project)</title>
     <style>
-        /* RESET */
+        /* ================= RESET ================= */
         
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        /* BODY */
+        /* ================= BODY ================= */
         
         body {
             font-family: Arial, sans-serif;
@@ -22,10 +22,10 @@
             line-height: 1.6;
             padding: 20px 12px;
         }
-        /* CONTAINER */
+        /* ================= CONTAINER ================= */
         
         .container {
-            width: 92%;
+            width: 100%;
             max-width: 1200px;
             margin: auto;
             padding: 20px;
@@ -33,49 +33,48 @@
             border-top: 4px solid #7a1212;
             border-bottom: 4px solid #7a1212;
             border-radius: 10px;
+            overflow-x: hidden;
         }
-        /* HEADER */
+        /* ================= HEADER ================= */
         
         header h1 {
             font-size: 1.6rem;
             color: #ff5a5a;
             text-align: center;
-            letter-spacing: 1px;
             margin-bottom: 10px;
         }
-        /* NAV */
+        /* ================= NAV ================= */
         
         nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
             flex-wrap: wrap;
+            gap: 10px;
             margin: 15px 0;
         }
         
         nav a {
-            display: inline-block;
             padding: 8px 14px;
             background: #18181a;
             border-radius: 6px;
             color: #fff;
             text-decoration: none;
             font-weight: 600;
-            transition: .2s;
+            transition: 0.2s;
         }
         
         nav a:hover {
             background: #2a0f0f;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
-        /* INTRO */
+        /* ================= INTRO ================= */
         
         .intro {
             text-align: center;
             padding: 10px;
             margin-bottom: 18px;
         }
-        /* GRID */
+        /* ================= GRID ================= */
         
         .grid {
             display: grid;
@@ -83,7 +82,7 @@
             gap: 22px;
             align-items: start;
         }
-        /* CARD */
+        /* ================= CARD ================= */
         
         .card {
             background: #121212;
@@ -91,7 +90,7 @@
             border-radius: 8px;
             margin-bottom: 16px;
         }
-        /* LIST */
+        /* ================= LIST ================= */
         
         .card ul {
             margin-left: 18px;
@@ -100,13 +99,13 @@
         .card li {
             margin-bottom: 8px;
         }
-        /* SIDEBAR */
+        /* ================= SIDEBAR ================= */
         
         aside {
             position: sticky;
             top: 20px;
         }
-        /* META BOX */
+        /* ================= META ================= */
         
         .meta {
             background: #151515;
@@ -115,42 +114,41 @@
             border-top: 3px solid #6b1616;
             border-bottom: 3px solid #6b1616;
         }
-        /* GALLERY */
+        /* ================= GALLERY ================= */
         
         .gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            justify-content: center;
         }
         
         .gallery img {
             width: calc(33.333% - 10px);
-            min-width: 120px;
             height: 140px;
             object-fit: cover;
             border-radius: 6px;
         }
-        /* VIDEO */
+        /* ================= VIDEO ================= */
         
         .video-wrap video {
             width: 100%;
             border-radius: 8px;
         }
-        /* TABLE FIX (IMPORTANT) */
+        /* ================= TABLE ================= */
         
         table {
             width: 100%;
             border-collapse: collapse;
             display: block;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
         
         table th,
         table td {
             padding: 10px;
-            min-width: 120px;
             text-align: center;
+            white-space: nowrap;
         }
         
         tbody tr:nth-child(even) {
@@ -159,9 +157,8 @@
         
         tbody tr:hover {
             background: #2a0f0f;
-            color: #fff;
         }
-        /* EXPERTS */
+        /* ================= EXPERTS ================= */
         
         .experts {
             display: flex;
@@ -176,7 +173,12 @@
             border-top: 2px solid #6b1414;
             border-bottom: 2px solid #6b1414;
         }
-        /* FOOTER */
+        /* ================= LINKS ================= */
+        
+        a {
+            color: #ff6b6b;
+        }
+        /* ================= FOOTER ================= */
         
         footer {
             text-align: center;
@@ -184,21 +186,17 @@
             margin-top: 18px;
             color: #cfcfcf;
         }
-        /* LINKS */
+        /* ================= GLOBAL IMAGE FIX ================= */
         
-        a {
-            color: #ff6b6b;
-        }
-        /* FOCUS */
-        
-        a:focus {
-            outline: 3px solid rgba(255, 90, 90, 0.3);
-            outline-offset: 3px;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         /* ================= RESPONSIVE ================= */
         /* TABLET */
         
-        @media (max-width:1024px) {
+        @media (max-width: 1024px) {
             .grid {
                 grid-template-columns: 1fr;
             }
@@ -209,95 +207,115 @@
         }
         /* MOBILE */
         
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 1.2rem;
             }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
             .gallery img {
                 width: 48%;
-                height: 130px;
-            }
-            table {
-                font-size: 0.85rem;
-            }
-            .card {
-                padding: 12px;
+                height: auto;
             }
         }
-        /* VERY SMALL PHONES */
+        /* SMALL MOBILE */
         
-        @media (max-width:480px) {
+        @media (max-width: 480px) {
             .container {
-                width: 100%;
                 padding: 12px;
-            }
-            .gallery img {
-                width: 100%;
-                height: 160px;
             }
             nav a {
                 width: 100%;
                 text-align: center;
             }
+            .gallery img {
+                width: 100%;
+            }
         }
+        /* ===== MOBILE OVERFLOW FIX ===== */
         
         html,
         body {
             width: 100%;
+            max-width: 100%;
             overflow-x: hidden;
         }
-        /* جلوگیری از بیرون زدن هر چیزی */
         
-        * {
+        .container,
+        main,
+        aside,
+        section,
+        article,
+        div {
             max-width: 100%;
         }
-        /* GRID FIX */
         
-        .grid {
-            grid-template-columns: 1fr;
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        /* TABLE FIX قطعی */
+        
+        p,
+        li,
+        td,
+        th,
+        h1,
+        h2,
+        h3,
+        h4 {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
         
         table {
-            display: block;
             width: 100%;
+            display: block;
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
         }
-        /* مهم: جلوگیری از min-width خراب‌کننده */
         
         table th,
         table td {
-            min-width: unset;
-            white-space: nowrap;
+            white-space: normal;
         }
-        /* GALLERY FIX */
         
-        .gallery img {
-            max-width: 100%;
-            width: 100%;
-            height: auto;
-        }
-        /* NAV FIX */
-        
-        nav a {
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        /* CONTAINER FIX */
-        
-        .container {
-            width: 100%;
-            overflow-x: hidden;
-        }
-        /* SIDEBAR FIX */
-        
-        aside {
-            width: 100%;
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 12px;
+            }
+            .grid {
+                display: block;
+            }
+            aside {
+                width: 100%;
+                margin-top: 20px;
+                position: static;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 1.1rem;
+                line-height: 1.4;
+            }
         }
     </style>
 </head>

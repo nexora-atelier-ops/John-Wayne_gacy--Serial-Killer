@@ -22,7 +22,7 @@
             line-height: 1.6;
             padding: 20px 12px;
         }
-        /* MAIN WRAPPER */
+        /* CONTAINER */
         
         .container {
             width: 92%;
@@ -75,7 +75,7 @@
             padding: 10px;
             margin-bottom: 18px;
         }
-        /* GRID LAYOUT */
+        /* GRID */
         
         .grid {
             display: grid;
@@ -133,15 +133,11 @@
         }
         /* VIDEO */
         
-        .video-wrap {
-            margin-top: 12px;
-        }
-        
         .video-wrap video {
             width: 100%;
             border-radius: 8px;
         }
-        /* TABLE FIX (IMPORTANT RESPONSIVE) */
+        /* TABLE FIX (IMPORTANT) */
         
         table {
             width: 100%;
@@ -165,7 +161,7 @@
             background: #2a0f0f;
             color: #fff;
         }
-        /* EXPERT BOX */
+        /* EXPERTS */
         
         .experts {
             display: flex;
@@ -193,14 +189,14 @@
         a {
             color: #ff6b6b;
         }
-        /* FOCUS ACCESSIBILITY */
+        /* FOCUS */
         
         a:focus {
             outline: 3px solid rgba(255, 90, 90, 0.3);
             outline-offset: 3px;
         }
         /* ================= RESPONSIVE ================= */
-        /* tablet */
+        /* TABLET */
         
         @media (max-width:1024px) {
             .grid {
@@ -211,7 +207,7 @@
                 top: auto;
             }
         }
-        /* mobile */
+        /* MOBILE */
         
         @media (max-width:768px) {
             header h1 {
@@ -231,6 +227,77 @@
             .card {
                 padding: 12px;
             }
+        }
+        /* VERY SMALL PHONES */
+        
+        @media (max-width:480px) {
+            .container {
+                width: 100%;
+                padding: 12px;
+            }
+            .gallery img {
+                width: 100%;
+                height: 160px;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* جلوگیری از بیرون زدن هر چیزی */
+        
+        * {
+            max-width: 100%;
+        }
+        /* GRID FIX */
+        
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        /* TABLE FIX قطعی */
+        
+        table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        /* مهم: جلوگیری از min-width خراب‌کننده */
+        
+        table th,
+        table td {
+            min-width: unset;
+            white-space: nowrap;
+        }
+        /* GALLERY FIX */
+        
+        .gallery img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+        /* NAV FIX */
+        
+        nav a {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        /* CONTAINER FIX */
+        
+        .container {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* SIDEBAR FIX */
+        
+        aside {
+            width: 100%;
         }
     </style>
 </head>
